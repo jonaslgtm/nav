@@ -14,8 +14,6 @@ import MNav from './nav/MNav.vue'
 
 * 整理本人生活工作中常用的一些站点
 
-* [在线工具](/efficiency/online-tools) 一些实用的在线工具，免去下载软件的烦恼
-
 :::
 
 <MNav/>
