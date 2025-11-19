@@ -11,7 +11,7 @@ export default defineConfig({
   base: APP_BASE_PATH ? `/${APP_BASE_PATH}/` : '/',
 
   lang: 'zh-CN',
-  title: '浮舱导航',
+  title: '浮舱笔记',
   description: '浮舱笔记，Notes to Self.',
   head,
 
@@ -33,7 +33,8 @@ export default defineConfig({
 
     logo: '/logo.webp',
 
-    // nav,
+    nav,
+    // sidebar,
 
     /* 右侧大纲配置 */
     outline: {
@@ -41,7 +42,7 @@ export default defineConfig({
       label: '页面导航',
     },
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/jonaslgtm/nav' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/nav' }],
 
     footer: {
       // message: '如有转载或 CV 的请标注本站原文地址',
@@ -56,6 +57,9 @@ export default defineConfig({
       },
     },
 
+    /* Algolia DocSearch 配置 */
+    // algolia,
+
     docFooter: {
       prev: '上一篇',
       next: '下一篇',
@@ -66,12 +70,24 @@ export default defineConfig({
     darkModeSwitchLabel: '主题',
     lightModeSwitchTitle: '切换到浅色模式',
     darkModeSwitchTitle: '切换到深色模式',
+
+    /*** 自定义配置 ***/
+    visitor: {
+      badgeId: 'jonaslgtm.nav',
+    },
+
+    // comment: {
+    //   repo: 'jonaslgtm/mm-notes',
+    //   repoId: 'MDEwOlJlcG9zaXRvcnkxNTc0ODc5Mjg=',
+    //   category: 'Announcements',
+    //   categoryId: 'DIC_kwDOCWMTOM4CZ2rf',
+    // },
   },
 
-  /*** 自定义配置 ***/
-  visitor: {
-      badgeId: 'jonaslgtm.notes',
-    },
+  /* 生成站点地图 */
+  // sitemap: {
+  //   hostname: 'https://notes.fe-mm.com/',
+  // },
 
   vite: {
     plugins: [MarkdownPreview()],
