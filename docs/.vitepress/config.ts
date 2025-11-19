@@ -42,7 +42,7 @@ export default defineConfig({
       label: '页面导航',
     },
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/nav' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/jonaslgtm/nav' }],
 
     footer: {
       // message: '如有转载或 CV 的请标注本站原文地址',
