@@ -2,7 +2,7 @@ import { basename } from 'node:path'
 import { defineConfig } from 'vitepress'
 import MarkdownPreview from 'vite-plugin-markdown-preview'
 
-import { head, nav} from './configs'
+import { head, nav, sidebar, algolia } from './configs'
 
 const APP_BASE_PATH = basename(process.env.APP_BASE_PATH || '')
 
@@ -68,6 +68,10 @@ export default defineConfig({
     darkModeSwitchTitle: '切换到深色模式',
   },
 
+  /*** 自定义配置 ***/
+  visitor: {
+      badgeId: 'jonaslgtm.notes',
+    },
 
   vite: {
     plugins: [MarkdownPreview()],
